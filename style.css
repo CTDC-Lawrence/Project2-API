@@ -1,39 +1,133 @@
 @font-face {
   font-family: 'Harry P';
-   src: url('HARRYP__.TTF') format('truetype'); /* Safari, Android, iOS */
-  }
+  src: url('HARRYP__.TTF') format('truetype'); /*Safari, Android, iOS */
+}
 
 h1 {
   font-family: 'Harry P';
+  text-align: center;
 }
 
 body {
   font-family: 'Harry P';
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .characters-container {
-    display: flex;
-    flex-wrap: wrap;   
-  }
+  display: flex;
+  flex-wrap: wrap;  
+  background-image: url("./HogwartsSchool.jpg");
+  background-size: 100%;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  margin-top: 5px;
+  justify-content: center;
+}
+
+.Gryffindor {
+  font-family: 'Harry P';
+  border: 4px solid goldenrod;
+  background-color: maroon;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 150px;
+}
+
+.Slytherin {
+  background-color: green;
+  border: 4px solid grey;
+  font-family: 'Harry P';
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 150px;
+
+}
+
+.Hufflepuff {
+  background-color: rgb(24, 24, 58);
+  border: 4px solid brown;
+  font-family: 'Harry P';
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 150px;
+
+}
+
+.Ravenclaw {
+  background-color: black;
+  border: 4px solid yellow;
+  font-family: 'Harry P';
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 150px;
+}
+
+.notaStudent {
+  background-color: black;
+  border: 4px solid white;
+  font-family: 'Harry P';
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 150px;
+}
+
+.character {  
+  font-family: 'Harry P';
+  border: 4px solid goldenrod;
+  background-color: maroon;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 150px;
+}
   
-.character {
-    background-color: green;
-    font-family: 'Harry P';
-    color: white;
-    margin: 10px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 350px;
-  }
-  
-.character img {
-    width: 70%;
-  }
+.character image {
+  height: 40%;
+  width: 70%;
+}
   
 .character h4 {
     font-size: 24px;
     height: 50px;
-  }
+}
 
+.btn {
+  background-color: Green; /* Green */
+  border: solid;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.btn, btn-outline-secondary {
+  background-color: maroon;
+  border-radius: .5em;
+}
