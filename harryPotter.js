@@ -1,14 +1,5 @@
 const getSelectedValue = document.querySelector( '[name="house"]:checked');
 
-//const toolbar = document.querySelector('.radio-toolbar');
-//toolbar.addEventListener('change', handleIDChanges);
-//function handleNameChanges(event){
-//const changedHouse = event.target;
-//if(changedHouse.ID == 'Gryffindor'){
-//changedHouse.parentElement.classList.toggle('checked-style');
-//}
-//}
-
 function loadCharacters(event) {
   event.preventDefault();
   getSelectedValue.value = "";   
@@ -49,7 +40,7 @@ function loadCharacters(event) {
 	                    <img src="${character.image}" alt="${character.name}" />
 					</div>
 	                `;
-				} else if (character.house === '') {
+				} else if (character.house === 'Others') {
 					htmlTemplate += `
 					<div class ="notaStudent">
 	                    <h4>${character.name}</h4>                     
@@ -64,5 +55,5 @@ function loadCharacters(event) {
 		//...
 		//});
  
-const form = document.querySelector(".js-search-form");
+const form = document.querySelector("form");
 form.addEventListener("submit", loadCharacters);
