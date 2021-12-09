@@ -1,6 +1,5 @@
 const url = 'https://hp-api.herokuapp.com/api/characters/';
 const btn = document.querySelector('#btn');
-const output = document.querySelector('.output');
 btn.addEventListener('click', (event) => {
     alert(getSelectedCheckboxValues('house'), loadCharacters);
 });
@@ -16,7 +15,7 @@ function getSelectedCheckboxValues(name) {
 
 function loadCharacters(event) {
   event.preventDefault();
-  //getSelectedCheckboxValues.values = values; 
+ // getSelectedCheckboxValues.values();
   } fetch(url)
 	.then(function(x) {return x.json()})
 	.then(function(characterArray) {
@@ -52,7 +51,7 @@ function loadCharacters(event) {
 	            `;
 			} else if (character.house === 'Others') {
 				htmlTemplate += `
-				<div class ="notaStudent">
+				<div class ="Others">
 	                <h4>${character.name}</h4>                     
 	                <img src="${character.image}" alt="${character.name}" />
 				</div>
@@ -61,9 +60,6 @@ function loadCharacters(event) {
 	    }
 	    const charactersContainer = document.querySelector(".js-characters-container");
         charactersContainer.innerHTML = htmlTemplate;
-	})//.catch(error => {
-		//...
-		//});
-
-//const form = document.querySelector("form");
-//form.addEventListener("submit", loadCharacters);
+	}).catch(error => {
+		alert('Try another selection')	
+	});
