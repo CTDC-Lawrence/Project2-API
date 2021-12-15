@@ -16,37 +16,36 @@ function getSelectedCheckboxValues(name) {
 
 function loadCharacters() {
 
-
   fetch(url)
 	.then(function(x) {return x.json()})
 	.then(function(characterArray) {
-		let houses = getSelectedCheckboxValues('house');
+		let houses = getSelectedCheckboxValues('house');  
 		alert(houses);
 	    let htmlTemplate = '';
 	    for (let character of characterArray) {
-			if (character.house === "") {
-				htmlTemplate += `
-				<div class="Others">
-	                <h4>${character.name}</h4>                     
-	                <img src="${character.image}" alt="${character.name}" />
-				</div>
-	            `;
-			} else if ( houses.includes(character.house) ) {
+			if ( houses.includes(character.house) ) {
 				htmlTemplate += `
 					<div class="${character.house}">
 						<h4>${character.name}</h4>                     
 						<img src="${character.image}" alt="${character.name}" />
 					</div>
 					`;	
-			} 
-
+			}
+					
+			//if (character.house === "") {
+			//	htmlTemplate += `
+			//	<div class="Others">
+	        //        <h4>${character.name}</h4>                     
+	        //        <img src="${character.image}" alt="${character.name}" />
+			//	</div>
+	        //    `;
+			//} else 
 	    }
 	    const charactersContainer = document.querySelector(".js-characters-container");
         charactersContainer.innerHTML = htmlTemplate;
 	}).catch(error => {
 		alert('Try another selection')	
 	});
-
-  } 
+} 
   
 
