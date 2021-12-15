@@ -31,15 +31,6 @@ function loadCharacters() {
 					</div>
 					`;	
 			}
-					
-			//if (character.house === "") {
-			//	htmlTemplate += `
-			//	<div class="Others">
-	        //        <h4>${character.name}</h4>                     
-	        //        <img src="${character.image}" alt="${character.name}" />
-			//	</div>
-	        //    `;
-			//} else 
 	    }
 	    const charactersContainer = document.querySelector(".js-characters-container");
         charactersContainer.innerHTML = htmlTemplate;
