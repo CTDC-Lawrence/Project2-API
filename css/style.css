@@ -12,13 +12,17 @@ body {
   font-family: 'Harry P';
   margin-left: 20px;
   margin-right: 20px;
+  background-image: url('HogwartsSchool.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .characters-container {
   display: flex;
   flex-wrap: wrap;  
   background-color: black;
-  background-size: 100%;
+  background-size: 70%;
   color: white;
   text-align: center;
   padding: 5px;
